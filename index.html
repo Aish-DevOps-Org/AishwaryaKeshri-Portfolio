@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <div class="container reveal">
+      <h2>Certifications &amp; Education</h2>
+      <p class="sub">Certifications verified on Microsoft Learn</p>
+      <div class="grid">
+        <a class="card cert" href="https://learn.microsoft.com/api/credentials/share/en-us/AishwaryaKeshri-8359/373763E83E6FBA9B?sharingId=EFC9A533860373BA" target="_blank" rel="noopener">
+          <span class="badge">🏅</span><h3>DevOps Engineer Expert</h3><span class="date">Microsoft Certified · Mar 2026</span></a>
+        <a class="card cert" href="https://learn.microsoft.com/api/credentials/share/en-us/AishwaryaKeshri-8359/D969F6C1CAB1D6F?sharingId=EFC9A533860373BA" target="_blank" rel="noopener">
+          <span class="badge">🛡️</span><h3>Azure Administrator Associate</h3><span class="date">Microsoft Certified · Mar 2026</span></a>
+        <a class="card cert" href="https://learn.microsoft.com/api/credentials/share/en-us/AishwaryaKeshri-8359/A7B613E189DA2891?sharingId=EFC9A533860373BA" target="_blank" rel="noopener">
+          <span class="badge">🤖</span><h3>Azure AI Fundamentals</h3><span class="date">Microsoft Certified · Mar 2026</span></a>
+        <a class="card cert" href="https://learn.microsoft.com/api/credentials/share/en-us/AishwaryaKeshri-8359/FF72CD048046B3E3?sharingId=EFC9A533860373BA" target="_blank" rel="noopener">
+          <span class="badge">☁️</span><h3>Azure Fundamentals</h3><span class="date">Microsoft Certified · Feb 2024</span></a>
+        <div class="card cert">
+          <span class="badge">🎓</span><h3>B.Tech, Civil Engineering</h3>
+          <span class="date">National Institute of Technology (NIT), Raipur · 2016 – 2020 · CGPA 8.27/10</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container contact reveal">
+      <h2>Let's Connect</h2>
+      <p class="sub">Open to DevOps, Platform and Cloud engineering opportunities.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:aishwaryakeshri97@hotmail.com">✉️ aishwaryakeshri97@hotmail.com</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/aishwarya-keshri-93b24314a/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/Aishwarya-Portfolio" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>© <span id="year"></span> Aishwarya Keshri · Hosted on GitHub Pages</footer>
+
+  <script>
+    const root = document.documentElement;
+    const saved = localStorage.getItem("theme");
+    if (saved) root.setAttribute("data-theme", saved);
+    else if (matchMedia("(prefers-color-scheme: light)").matches) root.setAttribute("data-theme", "light");
+    document.getElementById("themeBtn").addEventListener("click", () => {
+      const next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    });
+
+    const links = document.getElementById("navLinks");
+    document.getElementById("menuBtn").addEventListener("click", () => links.classList.toggle("open"));
+    links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => links.classList.remove("open")));
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
