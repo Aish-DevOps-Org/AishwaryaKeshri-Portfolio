@@ -2,10 +2,10 @@ name: Portfolio
 on: 
   push:
     branches: [main]
-  workflow_dispatch: true
+  workflow_dispatch: 
 permissions:
   pages: write
-  id_token: write
+  id-token: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
