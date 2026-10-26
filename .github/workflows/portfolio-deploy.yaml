@@ -9,7 +9,7 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environments:
+    environment:
       name: github-pages
       url: ${{ steps.deploy-pages.outputs.page_url }}
     steps:
@@ -19,5 +19,7 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
+        with:
+          path: "."
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
