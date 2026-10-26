@@ -1,4 +1,279 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aishwarya Keshri | DevOps Engineer – Azure DevOps, CI/CD, IaC</title>
+  <meta name="description" content="Aishwarya Keshri – Azure DevOps engineer with 4+ years at Microsoft: CI/CD, Infrastructure as Code (Terraform), Kubernetes, Azure, and root-cause analysis.">
+  <meta name="author" content="Aishwarya Keshri">
+  <meta property="og:title" content="Aishwarya Keshri | DevOps Engineer">
+  <meta property="og:description" content="Azure DevOps · CI/CD · Infrastructure as Code · Azure · Kubernetes">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230078d4'/><text x='50' y='66' font-size='46' text-anchor='middle' fill='white' font-family='Segoe UI,Arial' font-weight='700'>AK</text></svg>">
+  <style>
+    :root {
+      --bg: #0b1220; --bg-alt: #111a2e; --card: #15203a; --text: #e6ebf5; --muted: #9aa8c2;
+      --accent: #3b9eff; --accent-2: #50e3c2; --border: #24324f; --shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
+    [data-theme="light"] {
+      --bg: #f7f9fc; --bg-alt: #eef2f8; --card: #ffffff; --text: #1b2433; --muted: #5a6780;
+      --accent: #0078d4; --accent-2: #0f9d8a; --border: #dde4ef; --shadow: 0 8px 24px rgba(20,40,80,.08);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+    body { font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; background: var(--bg);
+           color: var(--text); line-height: 1.6; transition: background .3s, color .3s; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    nav { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--border); }
+    nav .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-weight: 700; font-size: 1.15rem; color: var(--text); }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 22px; list-style: none; align-items: center; }
+    .nav-links a { color: var(--muted); font-size: .95rem; }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+    .icon-btn { background: none; border: 1px solid var(--border); color: var(--text); border-radius: 8px;
+                padding: 6px 10px; cursor: pointer; font-size: 1rem; }
+    .menu-btn { display: none; }
+
+    header.hero { padding: 96px 0 72px; }
+    .eyebrow { color: var(--accent-2); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: .85rem; }
+    .hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.15; margin: 10px 0 14px; }
+    .hero h1 .grad { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text;
+                     background-clip: text; color: transparent; }
+    .hero p.lead { color: var(--muted); font-size: 1.15rem; max-width: 720px; }
+    .stats { display: flex; flex-wrap: wrap; gap: 16px; margin: 32px 0; }
+    .stat { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 20px; min-width: 150px; }
+    .stat b { display: block; font-size: 1.6rem; color: var(--accent); }
+    .stat span { color: var(--muted); font-size: .9rem; }
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-block; padding: 11px 22px; border-radius: 10px; font-weight: 600; border: 1px solid var(--accent);
+           transition: transform .15s; }
+    .btn.primary { background: var(--accent); color: #fff; }
+    .btn.ghost { color: var(--accent); }
+    .btn:hover { text-decoration: none; transform: translateY(-1px); }
+
+    section { padding: 72px 0; }
+    section:nth-of-type(odd) { background: var(--bg-alt); }
+    h2 { font-size: 1.8rem; margin-bottom: 8px; }
+    .sub { color: var(--muted); margin-bottom: 36px; }
+    .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; box-shadow: var(--shadow);
+            color: var(--text); }
+    a.card:hover { text-decoration: none; border-color: var(--accent); }
+    .card h3 { font-size: 1.05rem; margin-bottom: 12px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { font-size: .82rem; padding: 4px 10px; border-radius: 999px; background: rgba(59,158,255,.12);
+           color: var(--text); border: 1px solid rgba(59,158,255,.3); }
+
+    .timeline { position: relative; padding-left: 28px; border-left: 2px solid var(--border); }
+    .job { position: relative; margin-bottom: 36px; }
+    .job:last-child { margin-bottom: 0; }
+    .job::before { content: ""; position: absolute; left: -36px; top: 6px; width: 14px; height: 14px; border-radius: 50%;
+                   background: var(--accent); box-shadow: 0 0 0 4px var(--bg-alt); }
+    .job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px; }
+    .job h3 { font-size: 1.15rem; }
+    .job .company { color: var(--accent-2); font-weight: 600; }
+    .job .dates { color: var(--muted); font-size: .92rem; }
+    .job ul { margin: 10px 0 0 18px; }
+    .job li { margin-bottom: 6px; }
+    .hl { color: var(--accent); font-weight: 600; }
+
+    .project .stack { margin-top: 14px; }
+    .cert h3 { margin: 6px 0 4px; }
+    .cert .date { color: var(--muted); font-size: .9rem; }
+    .badge { font-size: 1.6rem; }
+
+    .contact { text-align: center; }
+    .contact .cta { justify-content: center; margin-top: 20px; }
+    footer { text-align: center; padding: 28px; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--border); }
+
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 760px) {
+      .menu-btn { display: inline-block; }
+      .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; flex-direction: column;
+                   background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 0; }
+      .nav-links.open { display: flex; }
+      header.hero { padding: 64px 0 48px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="#top" class="logo">Aishwarya<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button class="icon-btn" id="themeBtn" aria-label="Toggle light/dark theme">🌓</button></li>
+      </ul>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="container">
+      <div class="eyebrow">DevOps Engineer · Hyderabad, India</div>
+      <h1>Hi, I'm Aishwarya Keshri.<br><span class="grad">I keep Azure pipelines shipping.</span></h1>
+      <p class="lead">Azure DevOps engineer with 4+ years at Microsoft, troubleshooting and automating CI/CD for enterprise customers —
+        YAML pipelines, agents, service connections, Git workflows, Infrastructure as Code and Kubernetes.</p>
+      <div class="stats">
+        <div class="stat"><b>4+ yrs</b><span>Azure DevOps at Microsoft</span></div>
+        <div class="stat"><b>400+</b><span>Enterprise incidents resolved</span></div>
+        <div class="stat"><b>100%</b><span>SLA compliance</span></div>
+        <div class="stat"><b>4.8/5</b><span>Customer satisfaction (CPE)</span></div>
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/aishwarya-keshri-93b24314a/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/Aishwarya-Portfolio" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container reveal">
+      <h2>About</h2>
+      <p class="sub">What I do</p>
+      <div class="grid">
+        <div class="card">
+          <h3>🔧 CI/CD &amp; Release</h3>
+          <p>Multi-stage YAML and Classic pipelines; Microsoft-hosted, self-hosted and VMSS agents; service connections
+            (Service Principal / Managed Identity); approvals and quality gates.</p>
+        </div>
+        <div class="card">
+          <h3>🔍 Root-Cause Analysis</h3>
+          <p>Driving live-site investigations to closure using Kusto (KQL), Application Insights, agent/worker debug logs,
+            Fiddler and F12 traces — then documenting fixes to prevent repeats.</p>
+        </div>
+        <div class="card">
+          <h3>☁️ Cloud &amp; Infrastructure</h3>
+          <p>Provisioning Azure VNet, VMs and AKS with Terraform; containerizing apps with Docker and Kubernetes;
+            supporting Azure DevOps Server → Services migrations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container reveal">
+      <h2>Technical Skills</h2>
+      <p class="sub">Tools I work with every day</p>
+      <div class="grid">
+        <div class="card"><h3>CI/CD &amp; Release</h3><div class="tags">
+          <span class="tag">Azure Pipelines (YAML &amp; Classic)</span><span class="tag">Azure Repos</span><span class="tag">Azure Boards</span>
+          <span class="tag">GitHub</span><span class="tag">Multi-stage deployments</span><span class="tag">Approvals &amp; quality gates</span>
+          <span class="tag">Self-hosted agents</span><span class="tag">Service connections</span></div></div>
+        <div class="card"><h3>Source Control</h3><div class="tags">
+          <span class="tag">Git</span><span class="tag">Azure Repos</span><span class="tag">GitHub</span><span class="tag">TFVC</span>
+          <span class="tag">Branch policies</span><span class="tag">Pull request workflows</span></div></div>
+        <div class="card"><h3>Infrastructure as Code</h3><div class="tags">
+          <span class="tag">Terraform</span><span class="tag">Ansible</span></div></div>
+        <div class="card"><h3>Cloud (Azure)</h3><div class="tags">
+          <span class="tag">App Service</span><span class="tag">Azure Functions</span><span class="tag">Virtual Machines</span>
+          <span class="tag">Virtual Network (VNet)</span><span class="tag">Microsoft Entra ID</span><span class="tag">Managed Identity</span>
+          <span class="tag">Service Principal</span><span class="tag">RBAC</span><span class="tag">Azure Container Registry</span></div></div>
+        <div class="card"><h3>Containers</h3><div class="tags">
+          <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">AKS</span></div></div>
+        <div class="card"><h3>Scripting &amp; Automation</h3><div class="tags">
+          <span class="tag">Bash</span><span class="tag">Python</span><span class="tag">Azure CLI</span><span class="tag">Azure DevOps REST API</span></div></div>
+        <div class="card"><h3>Monitoring &amp; Troubleshooting</h3><div class="tags">
+          <span class="tag">Application Insights</span><span class="tag">Azure Monitor</span><span class="tag">Kusto (KQL)</span>
+          <span class="tag">Debug logs</span><span class="tag">Fiddler &amp; F12 traces</span><span class="tag">Root-cause analysis</span></div></div>
+        <div class="card"><h3>Data &amp; Platforms</h3><div class="tags">
+          <span class="tag">SQL Server</span><span class="tag">TFS / Azure DevOps Server</span><span class="tag">Linux</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container reveal">
+      <h2>Experience</h2>
+      <p class="sub">4+ years in Azure DevOps and Azure support engineering</p>
+      <div class="timeline">
+        <div class="job">
+          <div class="job-head">
+            <div><h3>Support Engineer – Azure DevOps</h3><div class="company">Microsoft</div></div>
+            <div class="dates">May 2024 – Present</div>
+          </div>
+          <ul>
+            <li>Resolved <span class="hl">400+</span> Azure DevOps incidents for enterprise customers spanning YAML/Classic pipelines,
+              self-hosted, Microsoft-hosted and VMSS agents, service connections, authentication, Azure Boards and Git repos,
+              sustaining <span class="hl">100% SLA</span> compliance and a <span class="hl">4.8/5</span> customer satisfaction score.</li>
+            <li>Performed root-cause analysis on pipeline, deployment and agent failures using agent/worker debug logs,
+              Kusto (KQL), Fiddler and F12 traces; documented fixes that reduced repeat cases.</li>
+            <li>Reproduced customer CI/CD scenarios by rebuilding environments with multi-stage YAML pipelines,
+              Git branch/PR workflows and Azure resources, cutting time-to-resolution.</li>
+            <li>Acted as primary technical contact on executive-level escalations, driving live-site investigations to closure
+              with product engineering teams.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="job-head">
+            <div><h3>Azure Support Engineer</h3><div class="company">Critical Mention (an Onclusive company)</div></div>
+            <div class="dates">Jul 2023 – May 2024</div>
+          </div>
+          <ul>
+            <li>Monitored and troubleshot data-ingestion issues for enterprise clients using New Relic, Azure Application Insights,
+              Kibana and SQL.</li>
+            <li>Diagnosed availability and performance issues for websites and REST APIs hosted on Azure App Service.</li>
+            <li>Analyzed ingested data with SQL and delivered customized reports to enterprise clients.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="job-head">
+            <div><h3>Support Engineer – Azure DevOps</h3><div class="company">Microsoft (via Teamware Solutions Pvt. Ltd.)</div></div>
+            <div class="dates">Jan 2022 – Jun 2023</div>
+          </div>
+          <ul>
+            <li>Supported enterprise customers migrating from Azure DevOps Server (TFS) to Azure DevOps Services.</li>
+            <li>Troubleshot Azure Pipelines build/release failures, agent configuration, and integrations with Azure and
+              third-party services.</li>
+            <li>Customized Azure Boards inherited and XML process templates, work items, areas and iterations.</li>
+            <li>Installed, configured and upgraded Team Foundation Server (TFS) and SQL Server; managed access levels, billing,
+              parallel jobs, Microsoft Entra ID groups, permissions and security.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container reveal">
+      <h2>Projects</h2>
+      <p class="sub">Hands-on builds</p>
+      <div class="grid">
+        <div class="card project">
+          <h3>🏦 Containerized Financial Platform with Contextual AI</h3>
+          <p>Provisioned Azure VNet, VMs and AKS with Terraform and deployed a containerized Spring Boot 3 / Java 21 app
+            (MySQL DB tier, Ollama AI tier) through multi-stage Azure DevOps pipelines with approval gates and image scanning,
+            reducing manual deployment effort.</p>
+          <div class="tags stack"><span class="tag">Terraform</span><span class="tag">Azure DevOps</span><span class="tag">Docker</span>
+            <span class="tag">Kubernetes / AKS</span><span class="tag">Azure VNet</span><span class="tag">MySQL</span><span class="tag">Ollama</span></div>
+        </div>
+        <div class="card project">
+          <h3>⚡ Azure Function App CI/CD</h3>
+          <p>Built CI/CD with Azure Repos Git and build/release pipelines to automatically build, test and deploy an
+            Azure Function App on every merge to main.</p>
+          <div class="tags stack"><span class="tag">Azure Repos</span><span class="tag">Azure Pipelines</span><span class="tag">Azure Functions</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
     <div class="container reveal">
       <h2>Certifications &amp; Education</h2>
       <p class="sub">Certifications verified on Microsoft Learn</p>
